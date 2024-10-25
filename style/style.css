@@ -2,35 +2,60 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
   height: 100vh;
-  font-family: sans-serif;
+  width: 100vw;
+  background: rgb(162, 226, 235);
+  background: radial-gradient(circle, rgb(162, 226, 235) 0%, #2dd1ea 100%);
+  overflow: hidden;
 }
 
 #contenedor-padre {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 100px 30px;
+  border-radius: 10px;
+}
+@media screen and (width > 440px) {
+  #contenedor-padre {
+    flex-direction: row;
+    padding: 200px 70px;
+  }
 }
 
 #seccion-introducir {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+@media screen and (width > 440px) {
+  #seccion-introducir {
+    width: 60%;
+  }
 }
 #seccion-introducir h1 {
   text-align: center;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.44);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.54);
+  color: #22BF6B;
+  color: white;
+  font-size: 40px;
 }
 #seccion-introducir p {
   margin: 30px 0;
   text-align: center;
   letter-spacing: 1px;
   opacity: 0.6;
+  width: 100%;
 }
 #seccion-introducir #div-input {
+  width: 100%;
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -42,10 +67,19 @@ body {
   border: none;
   height: 100%;
   outline: none;
-  border: 2px solid #22BF6B;
   border-radius: 4px;
   padding: 0 10px;
   gap: 10px;
+  transition: border-color 0.3s box-shadow 0.3s;
+}
+#seccion-introducir #div-input input:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+@media screen and (width > 440px) {
+  #seccion-introducir #div-input input {
+    width: 40%;
+  }
 }
 #seccion-introducir #div-input button {
   width: 11%;
@@ -74,6 +108,14 @@ body {
   border-radius: 8px;
   padding: 20px;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+}
+#seccionMostrarDatos #div-mostrar-datos .dato {
+  letter-spacing: 1px;
+  font-size: 14px;
+  opacity: 0.5;
 }
 
 #volver {
@@ -81,10 +123,11 @@ body {
   height: 10%;
   border: none;
   border-radius: 4px;
-  font-size: 20px;
-  background-color: #22BF6B;
+  font-size: 17px;
+  background-color: #049eb6;
   color: white;
   cursor: pointer;
   margin-top: 20px;
   letter-spacing: 2px;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
