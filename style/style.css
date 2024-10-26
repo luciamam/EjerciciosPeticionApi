@@ -6,7 +6,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
   background: rgb(162, 226, 235);
   background: radial-gradient(circle, rgb(162, 226, 235) 0%, #2dd1ea 100%);
@@ -18,15 +18,13 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 100px 30px;
-  border-radius: 10px;
 }
 @media screen and (width > 440px) {
   #contenedor-padre {
     flex-direction: row;
-    padding: 200px 70px;
+    padding: 50px 60px;
   }
 }
 
@@ -34,10 +32,14 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
+  padding-top: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 @media screen and (width > 440px) {
   #seccion-introducir {
-    width: 60%;
+    width: 40%;
   }
 }
 #seccion-introducir h1 {
@@ -47,12 +49,22 @@ body {
   color: white;
   font-size: 40px;
 }
+@media screen and (width > 440px) {
+  #seccion-introducir h1 {
+    width: 80%;
+  }
+}
 #seccion-introducir p {
   margin: 30px 0;
   text-align: center;
   letter-spacing: 1px;
   opacity: 0.6;
   width: 100%;
+}
+@media screen and (width > 440px) {
+  #seccion-introducir p {
+    width: 80%;
+  }
 }
 #seccion-introducir #div-input {
   width: 100%;
@@ -61,15 +73,20 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+@media screen and (width > 440px) {
+  #seccion-introducir #div-input {
+    width: 80%;
+  }
+}
 #seccion-introducir #div-input input {
   width: 85%;
   border-radius: 8px;
-  border: none;
   height: 100%;
   outline: none;
   border-radius: 4px;
-  padding: 0 10px;
+  padding: 10px 10px;
   gap: 10px;
+  border-color: #4A90E2;
   transition: border-color 0.3s box-shadow 0.3s;
 }
 #seccion-introducir #div-input input:focus {
@@ -78,7 +95,7 @@ body {
 }
 @media screen and (width > 440px) {
   #seccion-introducir #div-input input {
-    width: 40%;
+    width: 60%;
   }
 }
 #seccion-introducir #div-input button {
@@ -119,8 +136,8 @@ body {
 }
 
 #volver {
-  width: 30%;
-  height: 10%;
+  width: 25%;
+  height: 5%;
   border: none;
   border-radius: 4px;
   font-size: 17px;

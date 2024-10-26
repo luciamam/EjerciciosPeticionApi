@@ -7,10 +7,11 @@
     
 
 body
-    height: 100vh
+    height: 100svh
     width: 100vw
     background: rgb(162,226,235)
     background: radial-gradient(circle, rgba(162,226,235,1) 0%, #2dd1ea 100%)
+   
     overflow: hidden
 
 
@@ -19,14 +20,13 @@ body
     width: 100vw
     display: flex
     flex-direction: column
-    align-items: center
+    align-items: flex-start
     justify-content: center
-    padding: 100px 30px
-    //border: 2px solid green
-    border-radius: 10px
+    //padding: 50px 30px
+    
     @media screen and (width > 440px)
         flex-direction: row
-        padding: 200px 70px
+        padding: 50px 60px
       
         
         
@@ -35,9 +35,16 @@ body
     display: flex
     flex-direction: column
     width: 100%
+    height: 100%
+    padding-top: 60px
+    padding-right: 20px
+    padding-left: 20px
+
     //border:2px solid blue 
+    
     @media screen and (width > 440px)
-        width: 60%
+        width: 40%
+        
     
     h1
         text-align: center
@@ -45,6 +52,8 @@ body
         color: #22BF6B
         color: white 
         font-size:40px
+        @media screen and (width > 440px)
+            width: 80%
 
 
     p
@@ -54,6 +63,8 @@ body
         opacity: 0.6
         //border: 2px solid red
         width: 100%
+        @media screen and (width > 440px)
+            width: 80%
 
       
     #div-input
@@ -63,24 +74,27 @@ body
         flex-direction: row
         justify-content: space-between
         //border: 2px solid red 
+        @media screen and (width >440px)
+            width: 80%
         
         input
             width:85%
             border-radius: 8px
-            border: none
+            //border: none
             height: 100%
             outline: none
             //border: 2px solid #22BF6B
             border-radius: 4px
-            padding: 0 10px
+            padding: 10px 10px
             gap: 10px
+            border-color:  #4A90E2
             transition: border-color 0.3s box-shadow 0.3s
             &:focus
                 border-color: #4A90E2
                 box-shadow: 0 0 8px rgba(74, 144, 226, 0.5)
                 
             @media screen and (width > 440px)
-                width:40%
+                width:60%
 
 
         button 
@@ -126,8 +140,8 @@ body
 
 
 #volver
-    width: 30%
-    height: 10%
+    width: 25%
+    height: 5%
     border: none
     border-radius: 4px
     font-size: 17px
